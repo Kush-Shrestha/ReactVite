@@ -23,7 +23,11 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+<<<<<<< HEAD
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+=======
+      'no-unused-vars': ['warn', { varsIgnorePattern: '^[A-Z_]' }],
+>>>>>>> e34691b (React Training)
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

@@ -1,0 +1,1 @@
+export const LOGO_URL = 'https://toppng.com//public/uploads/preview/logo-designing-for-house-of-tshirts-online-shopping-logo-desi-11563314444xvpv60fw8y.png';
