@@ -1,1 +1,1 @@
-export const LOGO_URL = 'https://toppng.com//public/uploads/preview/logo-designing-for-house-of-tshirts-online-shopping-logo-desi-11563314444xvpv60fw8y.png';
+export const LOGO_URL = 'https://b2161880.smushcdn.com/2161880/wp-content/uploads/2022/04/ecomm-scaled.jpg?lossy=1&strip=1&webp=1';

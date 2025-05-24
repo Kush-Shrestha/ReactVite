@@ -1,16 +1,9 @@
 {
-<<<<<<< HEAD
-  "name": "king-s-store",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-=======
   "name": "ecommerceshop",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "author": "Kushal Shrestha",
->>>>>>> e34691b (React Training)
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -21,12 +14,9 @@
     "@tailwindcss/vite": "^4.1.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-<<<<<<< HEAD
-=======
     "react-icons": "^5.5.0",
     "react-router": "^7.6.0",
     "react-router-dom": "^7.6.0",
->>>>>>> e34691b (React Training)
     "tailwindcss": "^4.1.5"
   },
   "devDependencies": {

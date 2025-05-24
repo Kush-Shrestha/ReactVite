@@ -1,25 +1,96 @@
 import React from 'react';
 
-const Shimmer = () => {
+const skeletonCards = Array(20).fill(0);
+
+const shimmerKeyframes = `
+  @keyframes shimmer {
+    0% {
+      background-position: -468px 0;
+    }
+    100% {
+      background-position: 468px 0;
+    }
+  }
+`;
+
+const styles = {
+  container: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill,minmax(250px,1fr))',
+    gap: '20px',
+    padding: '20px',
+    backgroundColor: '#f5f7fa',
+    minHeight: '100vh',
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+  },
+  card: {
+    background: '#fff',
+    borderRadius: '12px',
+    padding: '15px',
+    boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+    overflow: 'hidden',
+  },
+  shimmerWrapper: {
+    position: 'relative',
+    overflow: 'hidden',
+    backgroundColor: '#e0e0e0',
+    borderRadius: '8px',
+  },
+  shimmer: {
+    animation: 'shimmer 1.5s infinite linear',
+    background: 'linear-gradient(to right, #e0e0e0 8%, #f3f3f3 18%, #e0e0e0 33%)',
+    backgroundSize: '800px 104px',
+    height: '100%',
+    width: '100%',
+  },
+  imageSkeleton: {
+    width: '100%',
+    height: '150px',
+    borderRadius: '12px',
+    marginBottom: '15px',
+  },
+  textSkeleton: {
+    height: '16px',
+    marginBottom: '10px',
+    borderRadius: '8px',
+  },
+  smallTextSkeleton: {
+    height: '14px',
+    width: '60%',
+    marginBottom: '10px',
+    borderRadius: '8px',
+  },
+  buttonSkeleton: {
+    height: '36px',
+    width: '100%',
+    borderRadius: '20px',
+    marginTop: '10px',
+  }
+}
+
+function ShimmerSkeleton({ style }) {
   return (
-    <div className="animate-pulse">
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="md:w-1/2">
-          <div className="w-full h-96 bg-gray-200 rounded-lg"></div>
-        </div>
-        <div className="md:w-1/2 space-y-4">
-          <div className="h-8 bg-gray-200 rounded w-3/4"></div>
-          <div className="space-y-2">
-            <div className="h-4 bg-gray-200 rounded"></div>
-            <div className="h-4 bg-gray-200 rounded"></div>
-            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-          </div>
-          <div className="h-6 bg-gray-200 rounded w-1/4"></div>
-          <div className="h-10 bg-gray-200 rounded w-1/3"></div>
-        </div>
-      </div>
+    <div style={{ ...styles.shimmerWrapper, ...style }}>
+      <div style={styles.shimmer}></div>
     </div>
   );
-};
+}
 
-export default Shimmer; 
+export default function EcoEcommerceSkeleton() {
+  return (
+    <>
+      <style>{shimmerKeyframes}</style>
+      <div style={styles.container}>
+        {skeletonCards.map((_, idx) => (
+          <div key={idx} style={styles.card} aria-label="Loading product">
+            <ShimmerSkeleton style={styles.imageSkeleton} />
+            <ShimmerSkeleton style={{ ...styles.textSkeleton, width: '80%' }} />
+            <ShimmerSkeleton style={styles.smallTextSkeleton} />
+            <ShimmerSkeleton style={styles.buttonSkeleton} />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
