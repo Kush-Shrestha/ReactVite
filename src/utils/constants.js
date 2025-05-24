@@ -1,1 +1,1 @@
-export const LOGO_URL = 'https://b2161880.smushcdn.com/2161880/wp-content/uploads/2022/04/ecomm-scaled.jpg?lossy=1&strip=1&webp=1';
+export const LOGO_URL = 'https://cdn-icons-png.flaticon.com/512/3081/3081559.png';

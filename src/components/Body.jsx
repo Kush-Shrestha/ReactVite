@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Body.css';
 import ProductCard from './ProductCard';
 import Shimmer from './Shimmer';
 

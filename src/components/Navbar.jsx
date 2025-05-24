@@ -6,13 +6,13 @@ const Navbar = () => {
     return (
         <nav className='bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 shadow-lg sticky top-0 z-50'>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                <div className='flex items-center justify-between h-20'>
+                <div className='flex items-center justify-between h-24'>
                     {/* Logo */}
                     <Link to="/" className='flex-shrink-0 transform hover:scale-105 transition-transform duration-300'>
                         <img
                             src={LOGO_URL}
                             alt='Logo'
-                            className='h-12 w-auto drop-shadow-lg'
+                            className='h-24 w-auto drop-shadow-lg'
                         />
                     </Link>
 
